@@ -1,2 +1,2 @@
-# WD66P_Group2_Activities
-Group 2 Activities of WD66P
+# WD66P_Group3_Activities
+Group 3 Activities of WD66P
