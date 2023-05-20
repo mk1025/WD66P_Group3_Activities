@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>This is a Practice</title>
+	</head>
+	
+	<body>
+		<h1>Contact us page</h1>
+		<a href="practicehtml.html">Home</a> <br />
+		<a href="contactus.html">Contact Us</a>
+		<a href="https://www.youtube.com" target="_blank">New Tab</a>
+		
+		<a href="https://www.youtube.com" target="_self">Self</a>
+		
+		<a href="https://www.youtube.com" target="_parent">Parent</a>
+		
+		<a href="https://www.youtube.com" target="_top">Top</a>
+		
+		
+		<a href="practicehtml.html">
+			<img src="pictures/lchs.png" alt="This is a logo" height="50" width="50"/>
+		</a>
+		
+		<br /><br />
+		<form>
+			Input type text: <input type="text" placeholder="Enter name"/> <br />
+			Input type password: <input type="password" /> <br />
+			Input type date: <input type="date" /> <br/>
+			Input type time: <input type="time" /> <br/>
+			Input type datetime: <input type="datetime-local" /> <br/>
+			Input type Checkbox: <input type="checkbox" /> <br />
+			Input type Radio: <input type="radio" /><br />
+			<textarea></textarea> <br/>
+			<select>
+				<option>Option 1</option>
+				<option>Option 2</option>
+				<option>Option 3</option>
+			</select><br/>
+			<button>CLICK ME</button>
+		</form>
+		<br /><br />
+			<table border ="3">
+			
+			
+	</body>
+	
+</html>
