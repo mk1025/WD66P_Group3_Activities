@@ -24,10 +24,76 @@ body {
   color: #428bf6;
 }
 
-.img-style {
-  margin-top: 10%;
-  width: 80%;
+.pd-bt {
+  margin-bottom: 50px;
 }
+
+.home-icon {
+  font-size: 1.5rem;
+  padding-right: 10px;
+}
+
+/* Image RHS */
+.img-style1 {
+  margin-top: 10%;
+  width: 300px;
+  border-radius: 53% 47% 36% 64% / 56% 30% 70% 44% ;
+  transition: border-radius 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.img-style1:hover {
+  border-radius: 61% 39% 71% 29% / 45% 51% 49% 55%  ;
+}
+
+.img-style2 {
+  margin-top: 10%;
+  width: 300px;
+  border-radius: 42% 58% 19% 81% / 37% 51% 49% 63%  ;
+  transition: border-radius 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.img-style2:hover {
+  border-radius: 19% 81% 56% 44% / 74% 14% 86% 26%;
+}
+
+.img-style2:hover {
+  border-radius: 62% 38% 56% 44% / 74% 57% 43% 26%;
+}
+
+.img-style3 {
+  margin-top: 10%;
+  width: 300px;
+  border-radius: 49% 51% 44% 56% / 44% 30% 70% 56%;
+  transition: border-radius 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.img-style3:hover {
+  border-radius: 73% 27% 44% 56% / 77% 62% 38% 23%;
+}
+
+.img-style4 {
+  margin-top: 10%;
+  width: 300px;
+  border-radius: 73% 27% 44% 56% / 77% 62% 38% 23%;
+  transition: border-radius 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.img-style4:hover {
+  border-radius: 19% 81% 56% 44% / 74% 14% 86% 26%;
+}
+
+.img-style5 {
+  margin-top: 10%;
+  width: 300px;
+  border-radius: 19% 81% 56% 44% / 74% 14% 86% 26%;
+  transition: border-radius 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.img-style5:hover {
+  border-radius: 62% 38% 56% 44% / 74% 57% 43% 26%;
+}
+/*End of Image RHS */
+
 
 a {
   text-decoration: none;
