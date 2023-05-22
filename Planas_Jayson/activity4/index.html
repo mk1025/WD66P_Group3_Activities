@@ -15,15 +15,13 @@
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container inner-container">
-        <div class="row shadow bg-white p-3">
+    <div class="container inner-container" >
+        <div class="row shadow bg-white p-3 border-style" >
+            <!-- Nav/Tab-->
             <div class="col-md-1">
-                <ul class="nav nav-pills justify-content-center" role="tablist" aria-orientation="vertical">
+                <ul class="nav nav-pills justify-content-center" role="tablist" aria-orientation="vertical" id="myTab">
                     <li class="nav-item col-md-12">
                         <a class="nav-link active text-center" data-bs-toggle="pill" href="#home"><i class="fa-solid fa-house"></i></a>
                     </li>
@@ -41,11 +39,13 @@
                     </li>
                 </ul>
             </div>
+
+            <!-- Content -->
             <div class="col-md-11">
                 <div class="tab-content">
                     
                     <!-- Home -->
-                    <div id="home" class="container tab-pane active "><br>
+                    <div id="home" class="container tab-pane active fade show"><br>
                         <div class="row">
                             <div class="col-md-7">
                                 <h3 class="content-title">Home</h3>
@@ -56,7 +56,14 @@
                                 <a href="https://www.facebook.com/cassive3/" target="_blank" class="home-icon"><i class="fa-brands fa-square-facebook"></i></a>
                             </div>
                             <div class="col-md-5">
-                                <img src="image/jzon.jpg" class="img-fluid mx-auto d-block img-style1 shadow" alt="">
+                                <div class="row right-image">
+                                    <div class="col-12 ">
+                                        <img src="image/jzon.jpg" class="img-fluid mx-auto d-block img-style1 shadow " alt="">
+                                    </div>
+                                    <div class="col-12">
+                                        <span class="bg-shape"></span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -74,7 +81,14 @@
                                 <a class="text-decoration-none" href="https://goo.gl/maps/et6s7ZePe8uF8ffz7"><p class="content-title">Maharlika Elementary School</p></a>
                             </div>
                             <div class="col-md-5">
-                                <img src="image/school.jpg" class="img-fluid mx-auto d-block img-style2 shadow" alt="">
+                                <div class="row right-image">
+                                    <div class="col-12 ">
+                                        <img src="image/school.jpg" class="img-fluid mx-auto d-block img-style1 shadow " alt="">
+                                    </div>
+                                    <div class="col-12">
+                                        <span class="bg-shape"></span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -187,7 +201,14 @@
 
                             </div>
                             <div class="col-md-5">
-                                <img src="image/work.jpg" class="img-fluid mx-auto d-block img-style3 shadow" alt="">
+                                <div class="row right-image">
+                                    <div class="col-12 ">
+                                        <img src="image/work.jpg" class="img-fluid mx-auto d-block img-style1 shadow " alt="">
+                                    </div>
+                                    <div class="col-12">
+                                        <span class="bg-shape"></span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -202,7 +223,14 @@
                                 <a href="https://kodego.ph/courses/17" target="_blank"><img  class="mini-logo"  src="image/kodigo.png" alt="KodeGo"></a>
                             </div>
                             <div class="col-md-5">
-                                <img src="image/training.jpg" class="img-fluid mx-auto d-block img-style4 shadow" alt="">
+                                <div class="row right-image">
+                                    <div class="col-12 ">
+                                        <img src="image/training.jpg" class="img-fluid mx-auto d-block img-style1 shadow " alt="">
+                                    </div>
+                                    <div class="col-12">
+                                        <span class="bg-shape"></span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -222,7 +250,14 @@
                                 <p class="content-title">Concentrix Bridgewood | Recruiter I—Talent Acquisition | +6394512285722</p>
                             </div>
                             <div class="col-md-5">
-                                <img src="image/reference.jpg" class="img-fluid mx-auto d-block img-style1 shadow" alt="">
+                                <div class="row right-image">
+                                    <div class="col-12 ">
+                                        <img src="image/reference.jpg" class="img-fluid mx-auto d-block img-style1 shadow " alt="">
+                                    </div>
+                                    <div class="col-12">
+                                        <span class="bg-shape"></span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -232,5 +267,10 @@
         </div>
     </div>
 
+
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
 </body>
 </html>
