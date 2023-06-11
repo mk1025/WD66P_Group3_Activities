@@ -19,7 +19,7 @@
 	function computeTotalInventory ($itemName, $stocks, $qty) {
 	  global $items;
 	  if($itemName == "Item 1"){
-      if($stocks > $qty){
+      if($stocks >= $qty){
         $newStock = $stocks-$qty;
         $items[0][1] = $newStock;
         return "$itemName - ($qty) | Remaining Stocks = $newStock";
@@ -29,7 +29,7 @@
       }
 	  }
     else if($itemName == "Item 2"){
-      if($stocks > $qty){
+      if($stocks >= $qty){
         $newStock = $stocks-$qty;
         $items[1][1] = $newStock;
         return "$itemName - ($qty) | Remaining Stocks = $newStock";
@@ -39,7 +39,7 @@
       }
 	  }
       else if($itemName == "Item 3"){
-      if($stocks > $qty){
+      if($stocks >= $qty){
         $newStock = $stocks-$qty;
         $items[2][1] = $newStock;
         return "$itemName - ($qty) | Remaining Stocks = $newStock";
