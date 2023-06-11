@@ -5,22 +5,22 @@
     ["Item 3", 300],
   ];
 
-  echo computeTotalInventory($items[0][0], $items[0][1], 3);
+  echo computeTotalInventory($items[0][0], 3);
   echo "\n";
-  echo computeTotalInventory($items[0][0], $items[0][1], 5);
+  echo computeTotalInventory($items[0][0], 5);
   echo "\n";
-  echo computeTotalInventory($items[1][0], $items[1][1], 5);
+  echo computeTotalInventory($items[1][0], 5);
   echo "\n";
-  echo computeTotalInventory($items[0][0], $items[0][1], 50);
+  echo computeTotalInventory($items[0][0], 50);
   echo "\n";
-  echo computeTotalInventory($items[2][0], $items[2][1], 5);
+  echo computeTotalInventory($items[2][0], 5);
 
 
-	function computeTotalInventory ($itemName, $stocks, $qty) {
+	function computeTotalInventory ($itemName, $qty) {
 	  global $items;
 	  if($itemName == "Item 1"){
-      if($stocks >= $qty){
-        $newStock = $stocks-$qty;
+      if($items[0][1] >= $qty){
+        $newStock = $items[0][1]-$qty;
         $items[0][1] = $newStock;
         return "$itemName - ($qty) | Remaining Stocks = $newStock";
       }
@@ -29,8 +29,8 @@
       }
 	  }
     else if($itemName == "Item 2"){
-      if($stocks >= $qty){
-        $newStock = $stocks-$qty;
+      if($items[1][1] >= $qty){
+        $newStock = $items[1][1]-$qty;
         $items[1][1] = $newStock;
         return "$itemName - ($qty) | Remaining Stocks = $newStock";
       }
@@ -39,8 +39,8 @@
       }
 	  }
       else if($itemName == "Item 3"){
-      if($stocks >= $qty){
-        $newStock = $stocks-$qty;
+      if($items[2][1] >= $qty){
+        $newStock = $items[2][1]-$qty;
         $items[2][1] = $newStock;
         return "$itemName - ($qty) | Remaining Stocks = $newStock";
       }
