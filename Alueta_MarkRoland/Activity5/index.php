@@ -27,11 +27,11 @@ function buyItem ($item, $quantity) {
                 : "This item (Bread) is sold out! <br>";
         case "eggs": return
             $item_2 > 0
-                ? ($quantity <= $item_2 ? "<pre> Item 1: Eggs \t ($quantity) qty \t | Remaining Stocks = " . ($item_2 -= $quantity) . "\n </pre>" : "Not enough stocks for Eggs! <br>")
+                ? ($quantity <= $item_2 ? "<pre> Item 2: Eggs \t ($quantity) qty \t | Remaining Stocks = " . ($item_2 -= $quantity) . "\n </pre>" : "Not enough stocks for Eggs! <br>")
                 : "This item (Eggs) is sold out! <br>";
         case "salt": return
             $item_3 > 0
-                ? ($quantity <= $item_3 ? "<pre> Item 1: Salt \t ($quantity) qty \t | Remaining Stocks = " . ($item_3 -= $quantity) . "\n </pre>" : "Not enough stocks for Salt! <br>")
+                ? ($quantity <= $item_3 ? "<pre> Item 3: Salt \t ($quantity) qty \t | Remaining Stocks = " . ($item_3 -= $quantity) . "\n </pre>" : "Not enough stocks for Salt! <br>")
                 : "This item (Salt) is sold out! <br>";
         default: return "Item is not on the Inventory! <br>";
     }
