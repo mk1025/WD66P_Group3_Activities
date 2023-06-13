@@ -28,6 +28,7 @@
         return "Not Enough Stocks";
       }
 	  }
+
     else if($itemName == "Item 2"){
       if($items[1][1] >= $qty){
         $newStock = $items[1][1]-$qty;
@@ -38,19 +39,21 @@
         return "Not Enough Stocks";
       }
 	  }
-      else if($itemName == "Item 3"){
+
+    else if($itemName == "Item 3"){
       if($items[2][1] >= $qty){
         $newStock = $items[2][1]-$qty;
         $items[2][1] = $newStock;
         return "$itemName - ($qty) | Remaining Stocks = $newStock";
       }
-	    else {
+      else {
         return "Not Enough Stocks";
       }
 	  }
-        else {
-        return "No Item";
-        }
+    
+    else {
+      return "No Item";
+    }
 	}
 	
 ?>
