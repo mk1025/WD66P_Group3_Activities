@@ -1,28 +1,46 @@
 <?php
-	//remainingStocks = (stocks - purchased_qty)
-	
-	echo remainingStocksItem1(100 , 3) ;
-	echo "\n" ;
-	echo remainingStocksItem1(97 , 5) ;
-	echo "\n" ;
-	echo remainingStocksItem2(200 , 5) ;
-	echo "\n" ;
-	echo remainingStocksItem1(92 , 50) ;
-	echo "\n" ;
-	echo remainingStocksItem3(300 , 5) ;
-	
-	
-	function remainingStocksItem1($stock1 , $purchased_qty) {
-	  $remainingStocksItem1 = $stock1 - $purchased_qty ; 
-	  return "Item 1 - ($purchased_qty) qty | Remaining Stocks = $remainingStocksItem1" ;
-	} 
-	function remainingStocksItem2($stock2 , $purchased_qty2) {
-	  $remainingStocksItem2 = $stock2 - $purchased_qty2 ; 
-	  return "Item 2 - ($purchased_qty2) qty | Remaining Stocks = $remainingStocksItem2" ;
-	}
-	function remainingStocksItem3($stock3 , $purchased_qty3) {
-	  $remainingStocksItem3 = $stock3 - $purchased_qty3 ; 
-	  return "Item 3 - ($purchased_qty3) qty | Remaining Stocks = $remainingStocksItem3" ;
-	}
-	
+  $stock1=100;
+  $stock2=200;
+  $stock3=300;
+
+ echo remainingStock($stock1 , 3);
+ echo "\n";
+ echo remainingStock($stock1 , 5);
+ echo "\n";
+ echo remainingStock($stock2 , 5);
+ echo "\n";
+ echo remainingStock($stock1 , 50);
+ echo "\n";
+ echo remainingStock($stock3 , 5);
+  
+  function remainingStock($stock, $qty){
+    global $stock1, $stock2, $stock3;
+    if($stock==$stock1){
+      if($qty<=$stock1){
+        $currentStock= $stock1 - $qty;
+        $stock1=$currentStock;
+       return "Item 1 - ($qty) | Remaining Stocks = $currentStock" ;
+     }else{
+        return "Out of Stock";
+     }
+    }else if($stock == $stock2){
+        if($qty <= $stock2){
+          $currentStock2 = $stock2 - $qty ;
+          $stock2 = $currentStock2;
+          return "Item 2 - ($qty) | Remaining Stocks = $currentStock2" ;
+        }else{
+          return "Out of Stock";
+        }
+      }else if ($stock == $stock3){
+        if($qty <= $stock3){
+          $currentStock3 = $stock3 - $qty ;
+          $stock3 = $currentStock3;
+          return "Item 3 - ($qty) | Remaining Stocks = $currentStock3" ;
+        }else{
+          return "Out of Stock";
+        }
+      }else{
+        return "Item Not Found";
+      }
+    }
 ?>
