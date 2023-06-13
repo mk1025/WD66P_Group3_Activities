@@ -1,0 +1,19 @@
+{
+  "name": "Activity 4",
+  "version": "1.0.0",
+  "description": "Activity 4 - Online Resume of Mark Roland Alueta - Advance",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mark Roland C. Alueta",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.2"
+  },
+  "dependencies": {
+    "flowbite": "^1.6.5",
+    "tailwind-scrollbar": "^3.0.4",
+    "typescript": "^5.0.4"
+  }
+}
