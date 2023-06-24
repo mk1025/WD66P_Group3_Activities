@@ -17,7 +17,7 @@
           id="Register_Form"
           name="Register_Form"
           action="./php/backend.php"
-          method="post"
+          method="POST"
           class="grid grid-flow-row grid-cols-2 gap-5"
         >
           <h1 class="font-semibold text-center text-xl col-span-2 mb-5">Register Your Account</h1>
@@ -89,6 +89,7 @@
               type="text"
               name="register_zip"
               id="register_zip"
+              pattern="[0-9]{4}(?:-[0-9]{4})?"
               required
             />
           </div>
@@ -124,7 +125,12 @@
             />
           </div>
           <div class="col-span-full text-sm text-neutral-500 justify-self-end">
-            <input type="checkbox" name="register_subscribe" id="register_subscribe" />
+            <input
+              type="checkbox"
+              name="register_subscribe"
+              id="register_subscribe"
+              value="subscribed"
+            />
             <span>Subscribe for the latest news</span>
           </div>
           <button
