@@ -1,30 +1,25 @@
-const DEFAULT_USERNAME = "admin";
+const DEFAULT_USERNAME = "admin@email.com";
 const DEFAULT_PASSWORD = "password";
 
 function checkLogin() {
   let email_address = document.getElementById("login_email_address") as HTMLInputElement;
   let password = document.getElementById("login_password") as HTMLInputElement;
 
-  let alerts = document.querySelectorAll("#alerts") as NodeListOf<HTMLDivElement>;
-  let alert_red = document.getElementById("alert-red") as HTMLDivElement;
-  let alert_yellow = document.getElementById("alert-yellow") as HTMLDivElement;
-  let alert_green = document.getElementById("alert-green") as HTMLDivElement;
+  let alerts = document.getElementById("alerts") as HTMLDivElement;
 
-  for (let alert of alerts) {
+  for (let alert of alerts.children) {
     if (!alert.classList.contains("hidden")) {
-      alert.classList.add("hidden");
+      alert.classList.toggle("hidden");
     }
   }
 
   if (email_address.validity.valid && password.validity.valid) {
-    if (email_address.value == DEFAULT_USERNAME && password.value == DEFAULT_PASSWORD) {
-      alert_green.classList.remove("hidden");
+    if (email_address.value === DEFAULT_USERNAME && password.value === DEFAULT_PASSWORD) {
+      alerts.querySelector("#alert-green")?.classList.toggle("hidden");
     } else {
-      alert_red.classList.remove("hidden");
+      alerts.querySelector("#alert-red")?.classList.toggle("hidden");
     }
   } else {
-    alert_yellow.classList.remove("hidden");
+    alerts.querySelector("#alert-yellow")?.classList.toggle("hidden");
   }
-
-  //   console.log(email_address, password);
 }
