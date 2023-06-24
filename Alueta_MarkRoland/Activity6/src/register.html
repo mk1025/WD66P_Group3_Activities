@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./js/register.js"></script>
+  </head>
+  <body class="bg-blue-100 grid h-screen w-full">
+    <div class="container bg-white w-max m-auto rounded-lg shadow-lg">
+      <header class="bg-gray-50 p-2 font-semibold text-lg">
+        <h6>Welcome to My System</h6>
+      </header>
+      <main class="p-5">
+        <form
+          id="Register_Form"
+          name="Register_Form"
+          action="./php/backend.php"
+          method="post"
+          class="grid grid-flow-row grid-cols-2 gap-5"
+        >
+          <h1 class="font-semibold text-center text-xl col-span-2 mb-5">Register Your Account</h1>
+          <div class="grid grid-flow-row gap-2">
+            <label for="register_first_name">First Name <sup>*</sup></label>
+            <input
+              class="border-gray-200 border rounded-sm w-full focus:border-blue-100 px-1 h-7"
+              type="text"
+              name="register_first_name"
+              id="register_first_name"
+              required
+            />
+          </div>
+          <div class="grid grid-flow-row gap-2">
+            <label for="register_last_name">Last Name <sup>*</sup></label>
+            <input
+              class="border-gray-200 border rounded-sm w-full focus:border-blue-100 px-1 h-7"
+              type="text"
+              name="register_last_name"
+              id="register_last_name"
+              required
+            />
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="register_birthday">Birthday <sup>*</sup></label>
+            <input
+              class="border-gray-200 border rounded-sm w-full focus:border-blue-100 px-1 h-7 align-top"
+              type="date"
+              name="register_birthday"
+              id="register_birthday"
+              required
+            />
+          </div>
+          <div class="grid grid-flow-row gap-2">
+            <label for="register_address">Address <sup>*</sup></label>
+            <textarea
+              class="border-gray-200 border rounded-sm focus:border-blue-100 px-1"
+              name="register_address"
+              id="register_address"
+              cols="10"
+              rows="2"
+              placeholder="123 Main St."
+            ></textarea>
+          </div>
+          <div class="grid grid-flow-row gap-2">
+            <label for="register_city">City <sup>*</sup></label>
+            <input
+              class="border-gray-200 border rounded-sm w-full focus:border-blue-100 px-1 h-7"
+              type="text"
+              name="register_city"
+              id="register_city"
+              required
+            />
+          </div>
+          <div class="grid grid-flow-col grid-cols-2 grid-rows-2 gap-1">
+            <label for="register_province">Province <sup>*</sup></label>
+            <select
+              class="border-gray-200 border rounded-sm focus:border-blue-100 px-1 h-7"
+              name="register_province"
+              id="register_province"
+            >
+              <option value="Abra">Abra</option>
+              <option value="Leyte">Leyte</option>
+              <option value="Other Province...">Other Province...</option>
+            </select>
+            <label for="register_zip">Zip <sup>*</sup></label>
+            <input
+              class="border-gray-200 border rounded-sm focus:border-blue-100 px-1 h-7"
+              type="text"
+              name="register_zip"
+              id="register_zip"
+              required
+            />
+          </div>
+          <hr class="col-span-2 border border-neutral-300" />
+          <div class="grid grid-flow-row gap-2">
+            <label for="register_email">Email <sup>*</sup></label>
+            <input
+              class="border-gray-200 border rounded-sm w-full focus:border-blue-100 px-1 h-7"
+              type="email"
+              name="register_email"
+              id="register_email"
+              required
+            />
+          </div>
+          <div class="grid grid-flow-row gap-2">
+            <label for="register_password">Password <sup>*</sup></label>
+            <input
+              class="border-gray-200 border rounded-sm w-full focus:border-blue-100 px-1 h-7"
+              type="password"
+              name="register_password"
+              id="register_password"
+              required
+            />
+          </div>
+          <div class="grid grid-flow-row gap-2">
+            <label for="register_confirm_password">Confirm Password <sup>*</sup></label>
+            <input
+              class="border-gray-200 border rounded-sm w-full focus:border-blue-100 px-1 h-7"
+              type="password"
+              name="register_confirm_password"
+              id="register_confirm_password"
+              required
+            />
+          </div>
+          <div class="col-span-full text-sm text-neutral-500 justify-self-end">
+            <input type="checkbox" name="register_subscribe" id="register_subscribe" />
+            <span>Subscribe for the latest news</span>
+          </div>
+          <button
+            class="col-span-full bg-blue-500 text-white py-2 rounded-lg shadow-lg focus:bg-blue-700 hover:bg-blue-600"
+            type="submit"
+            form="Register_Form"
+            value="Submit"
+          >
+            Create your Account
+          </button>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
