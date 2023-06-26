@@ -2,26 +2,42 @@ let myEmail = "admin";
 let myPassword = "12345";
 
 function loginForm() {
-    let inputEmail = document.getElementById("inputEmail").value;
-    let inputPassword = document.getElementById("inputPassword").value;
-    let alertMessage = document.getElementById("alert");
+    let inputEmail = document.getElementById("myEmail");
+    let inputPassword = document.getElementById("myPassword");
+
+    inputEmail = inputEmail.value;
+    inputPassword = inputPassword.value;
 
     if (inputEmail == "" || inputPassword == "") {
-        addAndRemoveAlert("alert-warning","alert-success","alert-danger","Please input email and password");
+        removeRenderAlertMessage();
+        addAlert("alert-warning", "Please input email and password");
     }
     else if (inputEmail == myEmail && inputPassword == myPassword) {
-        addAndRemoveAlert("alert-success","alert-warning","alert-danger","Successfully login");
+        removeRenderAlertMessage();
+        addAlert("alert-success", "Successfully login");
     }
-    else if (inputEmail != myEmail || inputPassword != myPassword ){
-        addAndRemoveAlert("alert-danger","alert-success","alert-warning","Wrong email and password");
+    else {
+        removeRenderAlertMessage();
+        addAlert("alert-danger", "Wrong email and password");
     }
 }
 
-function addAndRemoveAlert (addClass, removeClass1, removeClass2, addAlertMessage) {
-    let alertMessage = document.getElementById("alert");
-    alertMessage.classList.add(addClass);
-    alertMessage.classList.remove(removeClass1);
-    alertMessage.classList.remove(removeClass2);
-    alertMessage.classList.remove("visually-hidden");
-    alertMessage.innerText = addAlertMessage;
+function removeRenderAlertMessage() {
+    let currentAlerts = document.getElementsByClassName("alert");
+
+    for (let i=0; i<currentAlerts.length; i++) {
+        let message = currentAlerts[i];
+        message.parentNode.removeChild(message);
+    }
 }
+
+function addAlert(alertType, alertMessage) {
+    const div = document.createElement('div');
+    div.textContent = alertMessage;
+    div.classList.add("alert");
+    div.classList.add(alertType);
+    
+    const parent = document.getElementById("alertMessage");
+    parent.appendChild(div);
+}
+
