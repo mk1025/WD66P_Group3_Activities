@@ -1,7 +1,7 @@
 let myEmail = "admin";
 let myPassword = "12345";
 
-function login() {
+function loginForm() {
     let inputEmail = document.getElementById("inputEmail").value;
     let inputPassword = document.getElementById("inputPassword").value;
     let alertMessage = document.getElementById("alert");
@@ -25,4 +25,3 @@ function addAndRemoveAlert (addClass, removeClass1, removeClass2, addAlertMessag
     alertMessage.classList.remove("visually-hidden");
     alertMessage.innerText = addAlertMessage;
 }
-
