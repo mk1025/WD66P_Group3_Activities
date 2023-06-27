@@ -1,0 +1,17 @@
+{
+  "name": "activity6",
+  "version": "1.0.0",
+  "description": "Activity 6",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mark Roland C. Alueta",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.2"
+  },
+  "dependencies": {
+    "typescript": "^5.1.3"
+  }
+}
