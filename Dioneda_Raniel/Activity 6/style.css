@@ -1,0 +1,28 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.login-container {
+  text-align: center;
+}
+
+form input {
+  margin-bottom: 10px;
+}
+
+form button {
+  margin-top: 10px;
+}
+.form-label {
+  margin-right: 100px;
+}
+.card {
+  width: 40rem;
+}
+.accountLogin {
+  text-align: center;
+}
