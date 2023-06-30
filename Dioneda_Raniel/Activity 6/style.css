@@ -20,3 +20,9 @@ form button {
 .form-label {
   margin-right: 100px;
 }
+.card {
+  width: 40rem;
+}
+.accountLogin {
+  text-align: center;
+}
