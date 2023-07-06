@@ -1,5 +1,7 @@
 <?php 
 
+include "../functions.php";
+
 
 $defaultUsername = "admin";
 $defaultPassword = "password123";
@@ -27,6 +29,13 @@ if(isset($_POST['auth'])) {
     */
     if($defaultUsername === $loginRequest->email) {
         $response = createResponse(200, "Successfully Login", "Successful");
+        $_SESSION["logged-in-user"] = array(
+            "firstname" => "Mark",
+            "lastname" => "Alueta",
+            "email" => "email",
+            "contacts" => "0987654321",
+            "occupation" => "Web Developer"
+        );
     } else {
         $response = createResponse(401, "Wrong username password", "Error");
     }
@@ -34,9 +43,8 @@ if(isset($_POST['auth'])) {
     echo json_encode($response);
 }
 
-function createResponse($status, $description, $title) {
-    $response['status'] = $status;
-    $response['description'] = $description;
-    $response['title'] = $title;
-    return $response;
+if (isset($_POST['getLoggedUser'])) {
+    $response = createResponse(200, "Successfully Login", $_SESSION["logged-in-user"]);
+    echo json_encode($response);
 }
+
