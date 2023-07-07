@@ -47,6 +47,33 @@ function login() {
     },
   });
 }
+/* 
+
+  This function is for vanilla ajax
+
+*/
+function loginVanillaAjax() {
+  let loginRequest = {
+    email: $("#email").val(),
+    password: $("#password").val(),
+  };
+
+  let request = new XMLHttpRequest();
+
+  request.open("POST", LOGIN_API, true);
+  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+  request.onreadystatechange = function () {
+    if (request.readyState === 4 && request.status === 200) {
+      /* 
+        Meaning our ajax is successful
+      */
+      console.log(JSON.parse(request.response));
+    }
+  };
+
+  request.send("auth=" + JSON.stringify(loginRequest));
+}
 
 function getProfile() {
   $.ajax({
